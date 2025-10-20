@@ -1,0 +1,114 @@
+/* Custom Styles for Product Catalog */
+:root {
+    --primary-color: #4361ee;
+    --secondary-color: #3f37c9;
+    --success-color: #4cc9f0;
+    --danger-color: #f72585;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+.card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.card-header {
+    border-bottom: none;
+    font-weight: 600;
+}
+
+.table-hover tbody tr:hover {
+    background-color: rgba(67, 97, 238, 0.1);
+    transform: translateY(-1px);
+    transition: all 0.3s ease;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-success {
+    background: linear-gradient(45deg, #4cc9f0, #4361ee);
+    border: none;
+}
+
+.btn-success:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(67, 97, 238, 0.4);
+}
+
+.btn-danger {
+    background: linear-gradient(45deg, #f72585, #b5179e);
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(45deg, #4361ee, #3a0ca3);
+    border: none;
+}
+
+/* Loading animation */
+.spinner-border {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Table enhancements */
+.table th {
+    border-top: none;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+    
+    .table-responsive {
+        font-size: 0.9rem;
+    }
+    
+    .btn {
+        margin-bottom: 5px;
+    }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.card {
+    animation: fadeIn 0.6s ease-out;
+}
+
+/* Success message styles */
+.alert-success {
+    background: linear-gradient(45deg, #4cc9f0, #4361ee);
+    color: white;
+    border: none;
+    border-radius: 10px;
+}
